@@ -5,6 +5,24 @@
   "main": "dist/melonseedsUI.cjs.js",
   "module": "dist/melonseedsUI.es.js",
   "types": "dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/melonseedsUI.es.js",
+      "require": "./dist/melonseedsUI.cjs.js"
+    },
+    "./styles": {
+      "default": "./dist/melonseeds-ui.css"
+    },
+    "./resolver": {
+      "import": "./dist/resolver.es.js",
+      "require": "./dist/resolver.cjs.js"
+    }
+  },
   "scripts": {
     "generate:entry": "node scripts/generate-entry.mjs",
     "build": "pnpm run generate:entry && vite build",
@@ -18,11 +36,6 @@
   ],
   "author": "",
   "license": "ISC",
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
   "dependencies": {
     "@vue/compiler-sfc": "^3.5.13",
     "vue": "^3.5.13"
@@ -45,6 +58,7 @@
     "sass": "^1.86.3",
     "storybook": "8.6.12",
     "typescript": "^5.8.2",
+    "unplugin-vue-components": "^28.4.1",
     "vite": "^6.2.5",
     "vite-plugin-dts": "^4.5.3",
     "vitest": "^3.1.1"
