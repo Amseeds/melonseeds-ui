@@ -9,7 +9,7 @@ const MelonseedsUIResolver = (): ComponentResolver => {
                 return {
                     importName: name.slice(2), // 移除前缀（如 MeButton → Button）
                     path: 'melonseeds-ui',
-                    sideEffects: 'melonseeds-ui/dist/styles.css' // 自动引入样式
+                    sideEffects: 'melonseeds-ui/dist/melonseeds-ui.css' // 自动引入样式
                 };
             }
         }
