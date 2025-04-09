@@ -1,13 +1,9 @@
 
 import { App } from 'vue';
 import MeButton from './components/Button/Button.vue';
-import MeHeader from './components/Header/Header.vue';
-import MePage from './components/Page/Page.vue';
 
 const components = {
-  MeButton,
-  MeHeader,
-  MePage
+  MeButton
 };
 
 const install = (app: App) => {
@@ -22,8 +18,6 @@ export default {
 };
 
 export {
-  MeButton,
-  MeHeader,
-  MePage
+  MeButton
 };
 
